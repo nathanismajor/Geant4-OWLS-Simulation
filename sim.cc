@@ -12,6 +12,7 @@
 
 int main(int argc, char** argv)
 {
+
 	G4RunManager *runManager = new G4RunManager();
 	
 	runManager->SetUserInitialization(new MyDetectorConstruction());

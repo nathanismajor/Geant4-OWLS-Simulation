@@ -16,8 +16,13 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 	G4String particleName="opticalphoton";
 	G4ParticleDefinition *particle = particleTable->FindParticle("opticalphoton");
 	
-	G4ThreeVector pos(0.,0.,-0.02*m);
-	G4ThreeVector mom(0.,0.,1);
+//Use This for 0 Degree Measurement
+	//G4ThreeVector pos(0.02025*m,0.,0.);
+	
+//Use This for 90 Degree Measurement
+	G4ThreeVector pos(-0.02025*m,0.,0.);
+	
+	G4ThreeVector mom(1,0.,0.);
 	
 	fParticleGun->SetParticlePosition(pos);
 	fParticleGun->SetParticleMomentumDirection(mom);

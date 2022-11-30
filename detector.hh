@@ -5,13 +5,30 @@
 #include "G4RunManager.hh"
 #include "G4AnalysisManager.hh"
 
-class MySensitiveDetector : public G4VSensitiveDetector
+#include "G4VHit.hh"
+#include "G4Allocator.hh"
+#include "G4THitsCollection.hh"
+
+	//Class For Sensitive Detector
+
+class MyLensDetector : public G4VSensitiveDetector
 {
 public:
-	MySensitiveDetector(G4String name);
-	~MySensitiveDetector();
+	MyLensDetector(G4String name);
+	~MyLensDetector();
 	
 private:
 	virtual G4bool ProcessHits(G4Step *, G4TouchableHistory *);
 };
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
 #endif

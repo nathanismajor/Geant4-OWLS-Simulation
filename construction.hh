@@ -20,8 +20,9 @@ public:
 	virtual G4VPhysicalVolume *Construct();
 
 private:
-	G4LogicalVolume *logicAbsorption;
+	G4LogicalVolume *logicTransmission;
 	G4LogicalVolume *logicScattering;
+	G4LogicalVolume *logicLens;
 	virtual void ConstructSDandField();
 
 };
